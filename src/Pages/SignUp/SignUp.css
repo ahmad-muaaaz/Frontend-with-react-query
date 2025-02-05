@@ -1,0 +1,119 @@
+.signup-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f7fa;
+}
+
+.right {
+    width: 30%;
+    height: 60vh;
+    padding: 3rem;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    margin: 2rem;
+}
+
+.right_SignIn {
+    width: 30%;
+    height: 40vh;
+    padding: 3rem;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    margin: 2rem;
+}
+
+.signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.signup-form .ant-form-item {
+    margin-bottom: 1.5rem;
+}
+
+.signup-form .ant-input,
+.signup-form .ant-input-password {
+    height: 45px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+.signup-form .ant-input:focus,
+.signup-form .ant-input-password:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.signup-form .ant-checkbox-wrapper {
+    color: #6b7280;
+}
+
+.signup-form .ant-checkbox-wrapper a {
+    color: #6366f1;
+}
+
+.signup-form-button {
+    width: 100%;
+    height: 45px;
+    background: #6366f1;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.signup-form-button:hover {
+    background: #4f46e5;
+    transform: translateY(-1px);
+}
+
+.signup-form-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+        flex-direction: column;
+    }
+
+
+    .right {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        padding: 1rem;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .right_SignIn {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .signup-form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .signup-form .ant-form-item {
+        margin-bottom: 1rem;
+    }
+}
