@@ -9,15 +9,20 @@ import "../SignUp/SignUp.css"
 const SignIn = () => {
     const [form] = Form.useForm();
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const [login, { isLoading }] = useLoginMutation();
 
     const onFinish = async (values) => {
         try {
             const result = await login(values).unwrap();
-
+            console.log(result, "result")
+            if (result.data.authToken) {
+                dispatch(setCredentials(result))
+                navigate('/');
+                return
+            }
             form.resetFields();
-
             navigate('/code-verification?verification-token=' + result.data.verificationToken);
         } catch (error) {
             console.error('Login failed:', error);

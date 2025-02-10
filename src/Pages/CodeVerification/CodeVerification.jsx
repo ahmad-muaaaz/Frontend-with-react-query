@@ -18,6 +18,7 @@ const SignIn = () => {
     const onFinish = async (values) => {
         try {
             const result = await codeVerification({ code: values.code, verificationToken }).unwrap();
+
             dispatch(setCredentials(result))
             form.resetFields();
 

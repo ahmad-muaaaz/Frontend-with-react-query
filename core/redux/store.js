@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
 import { api } from '../api/api'
 import authReducer from './features/authSlice'
-import taskReducer from './features/taskSlice'
+import taskReducer from './features/blogSlice'
 import { notificationMiddleware } from './middlewares/notificationMiddleWare'
 export const store = configureStore({
     reducer: {

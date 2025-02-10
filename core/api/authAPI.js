@@ -18,6 +18,12 @@ export const authApi = api.injectEndpoints({
                     message: response.data?.message || 'Login failed'
                 }
             }),
+            async onQueryStarted(arg, { dispatch, queryFulfilled }) {
+                try {
+                    const { data } = await queryFulfilled;
+                    dispatch(setCredentials(data));
+                } catch { }
+            },
         }),
 
         codeVerification: builder.mutation({
@@ -36,8 +42,13 @@ export const authApi = api.injectEndpoints({
                     message: response.data?.message || 'Login failed'
                 }
             }),
+            async onQueryStarted(arg, { dispatch, queryFulfilled }) {
+                try {
+                    const { data } = await queryFulfilled;
+                    dispatch(setCredentials(data));
+                } catch { }
+            },
         }),
-
 
         signup: builder.mutation({
             query: (userData) => ({
@@ -56,7 +67,20 @@ export const authApi = api.injectEndpoints({
                 }
             }),
         }),
+
+        refreshToken: builder.mutation({
+            query: (refreshToken) => ({
+                url: 'auth/refresh-token',
+                method: 'POST',
+                body: { refreshToken },
+            }),
+        }),
     }),
 });
 
-export const { useLoginMutation, useSignupMutation, useCodeVerificationMutation } = authApi;
+export const {
+    useLoginMutation,
+    useSignupMutation,
+    useCodeVerificationMutation,
+    useRefreshTokenMutation
+} = authApi;

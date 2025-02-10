@@ -19,6 +19,17 @@
     margin: 2rem;
 }
 
+.right_createBlog {
+    width: 30%;
+    height: 80vh;
+    padding: 3rem;
+    background: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    margin: 2rem;
+}
+
 .right_SignIn {
     width: 30%;
     height: 40vh;
@@ -88,6 +99,16 @@
 
 
     .right {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        padding: 1rem;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .right_createBlog {
         width: 100%;
         margin: 0;
         padding: 0;

@@ -9,7 +9,8 @@ import Footer from './Components/Footer/Footer';
 import { store } from '../core/redux/store';
 import { Provider } from 'react-redux'
 import ProtectedRoute from './components/ProtectedRoutes/ProtectedRoutes'
-import Tasks from './Pages/Tasks/Tasks'
+import Blogs from './Pages/Blogs/Blogs'
+import BlogForm from './Pages/CreateBlog/CreateBlog';
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
@@ -17,15 +18,15 @@ const App = () => (
         <Header />
         <Routes>
 
-          <Route path="/signin" element={ <SignIn />} />
+          <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/code-verification" element={<CodeVerification />} />
-
+          <Route path="/createBlog" element={<BlogForm />} />
           <Route
-            path="/tasks"
+            path="/"
             element={
               <ProtectedRoute>
-                <Tasks />
+                <Blogs />
               </ProtectedRoute>
             }
           />

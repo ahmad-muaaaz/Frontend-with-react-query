@@ -10,10 +10,10 @@ const SignUp = () => {
         setLoading(true);
         console.log('Received values of form: ', values);
         // Simulate a server request
-        setTimeout(() => {
-            setLoading(false);
-            form.resetFields();
-        }, 2000);
+
+        setLoading(false);
+        form.resetFields();
+
     };
 
     return (
