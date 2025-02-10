@@ -8,7 +8,7 @@ import { Header } from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import { store } from '../core/redux/store';
 import { Provider } from 'react-redux'
-import ProtectedRoute from './components/ProtectedRoutes/ProtectedRoutes'
+import ProtectedRoute from './Components/ProtectedRoutes/ProtectedRoutes'
 import Blogs from './Pages/Blogs/Blogs'
 import BlogForm from './Pages/CreateBlog/CreateBlog';
 const App = () => (

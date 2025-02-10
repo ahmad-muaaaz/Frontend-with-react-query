@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { setCredentials, logout } from '../redux/features/authSlice';
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: 'http://localhost:5156/api/',
+    baseUrl: 'https://backend-dev-taskmanager.onrender.com/api/',
     prepareHeaders: (headers, { getState }) => {
         const token = getState().auth.token;
         if (token) {
